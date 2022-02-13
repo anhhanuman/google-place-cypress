@@ -31,8 +31,6 @@ describe('Google Place API', () => {
                 })
             }
         })
-
-
     })
 
     context('Find place API - Invalid or without API key', () => {
