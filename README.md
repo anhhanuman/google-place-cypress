@@ -10,7 +10,7 @@ Welcome to google place API manual and automation test. Here are the details
 ## **Testing strategy**
 - Grab the requirement thoroughly and analise it via Postman
 - Design manual test cases after get results from Postman
-- Design automation test by using the best practice Page Object Modal design pattern
+- Design automation test by using the best practice Page Object Modal design pattern for easier maintenance and clean code
 - Run automation test via single command, see results visually in headless mode or browser mode
 - Integrate to CI/CD
 
