@@ -17,6 +17,7 @@ Welcome to google place API manual and automation test. Here are the details
 ## **Technology stacks**
 - **POSTMAN** : Using for sending requests and receive response manually
 - **CYPRESS.IO**: Using for design and execute test cases automatically. Why using CYPRESS? Because it can be used for both UI and API automation
+- **Github Actions
 
 ## **Structure**
 
