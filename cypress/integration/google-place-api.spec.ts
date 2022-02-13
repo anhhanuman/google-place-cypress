@@ -28,7 +28,6 @@ describe('Google Place API', () => {
                     expect(placeResponse.status).to.equal(200)
                     expect(placeResponse.body.candidates.length).to.equal(0)
                     expect(placeResponse.body.status).to.equal('ZERO_RESULTS')
-
                 })
             }
         })
