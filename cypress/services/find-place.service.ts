@@ -1,24 +1,17 @@
-export class Service {
-    private readonly apiUrl = Cypress.env('apiUrl')
+import {apiData} from "../test-data/test-data";
+import {output} from "../test-data/test-data";
+
+export class FindPlaceService {
     private findPlace = Cypress.env('findPlace')
-    private placeDetails = Cypress.env('placeDetails')
-    private apiFindPlace = `${this.apiUrl}/${this.findPlace}`
-    private apiPlaceDetails = `${this.apiUrl}/${this.placeDetails}`
-    private output = {
-        json: 'json',
-        xml: 'xml'
-    }
-    private outputJSON = this.output.json
+    private apiFindPlace = `${apiData.apiUrl}/${this.findPlace}`
 
-    private apiKey = Cypress.env('apiKey')
-
-    callFindPlaceAPI(inputParam: string, type: string): Cypress.Chainable<Cypress.Response<any>> {
+    findPlaceFromText(placeName: string, type: string, apiKey?: string): Cypress.Chainable<Cypress.Response<any>> {
         return cy.request({
             method: "GET",
-            url: `${this.apiFindPlace}/${this.outputJSON}`,
+            url: `${this.apiFindPlace}/${output.JSON}`,
             qs: {
-                key: this.apiKey,
-                input: inputParam,
+                key: apiKey,
+                input: placeName,
                 inputtype: type
             }
         })
