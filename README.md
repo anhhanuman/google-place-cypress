@@ -1,7 +1,7 @@
 ## Introduction
 
 Welcome to google place API manual and automation test. Here are the details
-- ⭐️ [Demo deliverables](https://youtu.be/LYvFU3BzYbE)
+- ⭐️ [Demo deliverables](https://youtu.be/60yYDs78s1c)
 - ⚒️ [Testing Strategy](#testing-strategy)
 - 📖 [Technology stacks](#technology-stacks)
 - ✅ [Structure](#structure)
