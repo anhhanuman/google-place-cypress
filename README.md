@@ -1,7 +1,7 @@
 ## Introduction
 
 Welcome to google place API manual and automation test. Here are the details
-
+- ⭐️ [Demo deliverables](https://youtu.be/LYvFU3BzYbE)
 - ⚒️ [Testing Strategy](#testing-strategy)
 - 📖 [Technology stacks](#technology-stacks)
 - ✅ [Structure](#structure)
@@ -26,17 +26,6 @@ Welcome to google place API manual and automation test. Here are the details
 | [Manual Test](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/manual-test.md)  | Postman manual testing and requirement analysis  |
 | [Automation](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/automation-test.md)  | API Automation|
 
-### Prerequisite
-Please ensure you have node.js and npm in your machine, otherwise please install them
-- install node.js (my version 14.17.3)
-- install npm (my version 7.15.0) or you can use the yarn
-
-### Install development dependencies
-Clone this repository, open a new terminal and run command `npm install` to install the dev dependencies
-
-
-
-- Open cypress/integration/google-place.api.spec.ts to see the automated test cases details
 
 
 
