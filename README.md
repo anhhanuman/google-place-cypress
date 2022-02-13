@@ -23,7 +23,7 @@ Welcome to google place API manual and automation test. Here are the details
 | TASKS  | DESCRIPTION |
 | ------------- | ------------- |
 | [Manual Test](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/manual-test.md)  | Postman manual testing and requirement analysis  |
-| [Automation]()  | API Automation|
+| [Automation](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/automation-test.md)  | API Automation|
 
 ### Prerequisite
 Please ensure you have node.js and npm in your machine, otherwise please install them
