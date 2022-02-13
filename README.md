@@ -1,24 +1,29 @@
-
-
-
 ## Introduction
 
-Welcome to google place API manual and automation test. 
+Welcome to google place API manual and automation test. Here are the details
 
 - ⚒️ [Testing Strategy](#testing-strategy)
 - 📖 [Technology stacks](#technology-stacks)
-
-- ✅ [Installation](#installation)
-
-
-
-
+- ✅ [Structure](#structure)
 ---
 
 ## **Testing strategy**
 - Grab the requirement thoroughly and analise it via Postman
 - Design manual test cases after get results from Postman
-- Design automation test by using the best practice Page Object Modal for service layer and clean code
+- Design automation test by using the best practice Page Object Modal design pattern
+- Run automation test via single command, see results visually in headless mode or browser mode
+- Integrate to CI/CD
+
+## **Technology stacks**
+- **POSTMAN** : Using for sending requests and receive response manually
+- **CYPRESS.IO**: Using for design and execute test cases automatically. Why using CYPRESS? Because it can be used for both UI and API automation
+
+## **Structure**
+
+| TASKS  | DESCRIPTION |
+| ------------- | ------------- |
+| [Manual Test]()  | Postman manual testing and requirement analysis  |
+| [Automation]()  | API Automation|
 
 ### Prerequisite
 Please ensure you have node.js and npm in your machine, otherwise please install them
@@ -33,9 +38,4 @@ Clone this repository, open a new terminal and run command `npm install` to inst
 - Open cypress/integration/google-place.api.spec.ts to see the automated test cases details
 
 
-### Structure
 
-| TASKS  | DESCRIPTION |
-| ------------- | ------------- |
-| [Manual Test]()  | Postman manual testing and requirement analysis  |
-| [Automation]()  | API Automation|
