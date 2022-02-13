@@ -1,1 +1,7 @@
-{}
+{
+  "env": {
+    "apiUrl": "https://maps.googleapis.com/maps/api/place",
+    "findPlace": "findplacefromtext",
+    "placeDetails": "details"
+  }
+}
