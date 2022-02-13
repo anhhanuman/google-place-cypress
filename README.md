@@ -1,5 +1,7 @@
-## Introduction
+## Important Note
+For safety of APIkey, I do not upload the **.env** file here. Please read [Automation](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/automation-test.md) for more details.
 
+## Introduction
 Welcome to google place API manual and automation test. Here are the details
 - ⭐️ [Demo deliverables](https://youtu.be/60yYDs78s1c)
 - ⚒️ [Testing Strategy](#testing-strategy)
@@ -29,11 +31,11 @@ Welcome to google place API manual and automation test. Here are the details
 
 ## **Expected deliverables**
 
-| Requirement                      | Description | Status |
-|----------------------------------|-------------|--------|
-| Collection Executable test cases | see         | `✅`    |
-| How to execute tests manually    |             | `✅`    |
-| Scripts                          |             | `✅`    |
-| CI/CD                            |             | `✅`    |
+| Requirement                          | Description                                                           | Status |
+|--------------------------------------|-----------------------------------------------------------------------|--------|
+| [Collection executable test cases](https://github.com/anhhanuman/google-place-cypress/blob/main/cypress/integration/google-place-api.spec.ts) | Test cases are designed using Cypress bundled with Mocha              | `✅`    |
+| How to execute tests manually        |                                                                       | `✅`    |
+| Scripts                              | In terminal, run command:<br/> - npm run test<br/> - npx cypress open | `✅`    |
+| CI/CD                                |                                                                       | `✅`    |
 
 
