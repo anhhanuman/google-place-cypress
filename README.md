@@ -31,11 +31,11 @@ Welcome to google place API manual and automation test. Here are the details
 
 ## **Expected deliverables**
 
-| Requirement                          | Description                                                           | Status |
-|--------------------------------------|-----------------------------------------------------------------------|--------|
-| [Collection executable test cases](https://github.com/anhhanuman/google-place-cypress/blob/main/cypress/integration/google-place-api.spec.ts) | Test cases are designed using Cypress bundled with Mocha              | `✅`    |
-| How to execute tests manually        |                                                                       | `✅`    |
-| Scripts                              | In terminal, run command:<br/> - npm run test<br/> - npx cypress open | `✅`    |
-| CI/CD                                |                                                                       | `✅`    |
+| Requirement                                                                                                                                   | Description                                                                                                                                                                                                                   | Status    |
+|-----------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| [Collection executable test cases](https://github.com/anhhanuman/google-place-cypress/blob/main/cypress/integration/google-place-api.spec.ts) | Test cases are designed using Cypress bundled with Mocha                                                                                                                                                                      | `✅`       |
+| How to execute tests manually                                                                                                                 | If it is a manual test case, you have to use Postman and send request and verify it mannually<br/><br/>If it is the automation test case, set `it.only` and run command `npx cypress open` to view a single test case running | `✅`       |
+| Scripts                                                                                                                                       | In terminal, run command:<br/> - npm run test<br/> - npx cypress open                                                                                                                                                         | `✅`       |
+| [CI/CD](https://github.com/anhhanuman/google-place-cypress/actions)                                                                                                                                     | Use GitHub Actions and you see failed test cases here because of missing `.env and API key`. I am working on it to improve it.<br/><br/>Reference: https://github.com/cypress-io/github-action                                                                                | `✅`   `❌` |
 
 
