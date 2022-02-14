@@ -1,5 +1,5 @@
 ## Important Note
-For safety of APIkey, I do not upload the **.env** file here. Please read [Automation](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/automation-test.md) for more details.
+For the safety of APIkey, I do not upload the **.env** file here. Please read [Automation](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/automation-test.md) for more details.
 
 ## Introduction
 Welcome to google place API manual and automation test. Here are the details
@@ -10,15 +10,15 @@ Welcome to google place API manual and automation test. Here are the details
 ---
 
 ## **Testing strategy**
-- Grab the requirement thoroughly and analise it via Postman
-- Design manual test cases after get results from Postman
+- Grab the requirement thoroughly and analyse it via Postman
+- Design manual test cases after getting results from Postman
 - Design automation test by using the best practice Page Object Modal design pattern for easier maintenance and clean code
-- Run automation test via single command, see results visually in headless mode or browser mode
+- Run automation test via a single command, see results visually in headless mode or browser mode
 - Integrate to CI/CD
 
 ## **Technology stacks**
 - **POSTMAN** : Using for sending requests and receive response manually
-- **CYPRESS.IO**: Using for design and execute test cases automatically. Why using CYPRESS? Because it can be used for both UI and API automation
+- **CYPRESS.IO**: Using for design and execute test cases automatically. Why use CYPRESS? Because it can be used for both UI and API automation
 - **TypeScript/Javascript**
 - **Github Actions**
 
