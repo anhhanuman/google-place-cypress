@@ -7,7 +7,7 @@ jobs:
       - name: create .env
         run: |
           touch .env
-          echo API_KEY=${{secrets.API_KEY}} > .env
+          echo API_KEY="AIzaSyCDcUmm1LO0yeRVqdPsxo2ku6-weisiWHk" > .env
           cat .env
       - name: Checkout
         uses: actions/checkout@v2
