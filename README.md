@@ -1,3 +1,4 @@
+![main](https://github.com/anhhanuman/google-place-cypress/actions/workflows/main.yml/badge.svg)
 ## Important Note
 For the safety of APIkey, I do not upload the **.env** file here. Please read [Automation](https://github.com/anhhanuman/google-place-cypress/blob/main/docs/automation-test.md) for more details.
 
