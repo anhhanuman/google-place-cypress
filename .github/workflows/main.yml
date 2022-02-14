@@ -4,14 +4,11 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
-      - name: create .env
-        run: |
-          touch .env
-          echo API_KEY=${{ secrets.API_KEY }} > .env
-          cat .env
       - name: Checkout
         uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Cypress run with env
         uses: cypress-io/github-action@v2
+        with:
+          env: apiKey=${{ secrets.API_KEY }}
