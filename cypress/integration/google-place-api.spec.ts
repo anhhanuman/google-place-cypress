@@ -1,4 +1,4 @@
-import {placeNames} from "../test-data/test-data";
+import {output, placeNames} from "../test-data/test-data";
 import {FindPlaceService} from "../services/find-place.service";
 import {inputType} from "../test-data/test-data";
 import {PlaceDetailsService} from "../services/place-details.service";
@@ -11,10 +11,19 @@ describe('Google Place API', () => {
     const secondValidData = placeNames.valid[1]
     const invalidData = placeNames.invalid.names
     const validNames = firstValidData.names
+    const apiUrl = `${apiData.apiUrl}/${Cypress.env('findPlace')}`
     context('Find place API', () => {
         it('returns proper response status and place_ids', () => {
             for (const [index, placeName] of validNames.entries()) {
-                findPlaceService.findPlaceFromText(placeName, inputType.text, apiData.apiKey).then(placeResponse => {
+                cy.request({
+                    method: "GET",
+                    url: apiUrl,
+                    qs: {
+                        key: apiData.apiKey,
+                        input: placeName,
+                        inputtype: inputType.text
+                    }
+                }).then(placeResponse => {
                     const expectedPlaceId = firstValidData.placeIds[index]
                     expect(placeResponse.status).to.equal(200)
                     expect(placeResponse.body.candidates[0].place_id).to.equal(expectedPlaceId)
@@ -24,7 +33,15 @@ describe('Google Place API', () => {
 
         it('returns zero results if cannot find', () => {
             for (const data of invalidData) {
-                findPlaceService.findPlaceFromText(data, inputType.text, apiData.apiKey).then(placeResponse => {
+                cy.request({
+                    method: "GET",
+                    url: apiUrl,
+                    qs: {
+                        key: apiData.apiKey,
+                        input: data,
+                        inputtype: inputType.text
+                    }
+                }).then(placeResponse => {
                     expect(placeResponse.status).to.equal(200)
                     expect(placeResponse.body.candidates.length).to.equal(0)
                     expect(placeResponse.body.status).to.equal('ZERO_RESULTS')
@@ -55,7 +72,7 @@ describe('Google Place API', () => {
     context('Get place details', () => {
         it('returns place details with formatted phone numbers', () => {
             for (const [index, placeName] of validNames.entries()) {
-                placeDetailsService.getPlaceDetails(placeName, inputType.text,apiData.apiKey).then(placeDetailsResponse => {
+                placeDetailsService.getPlaceDetails(placeName, inputType.text, apiData.apiKey).then(placeDetailsResponse => {
                     const expectedFormattedPhoneNumber = firstValidData.formattedPhoneNumbers[index]
                     expect(placeDetailsResponse.body.result.formatted_phone_number).to.equal(expectedFormattedPhoneNumber)
                 })
@@ -63,7 +80,7 @@ describe('Google Place API', () => {
         })
 
         it('return place details without formatted phone number', () => {
-            placeDetailsService.getPlaceDetails(secondValidData.names[0], inputType.text,apiData.apiKey).then(placeDetailsResponse => {
+            placeDetailsService.getPlaceDetails(secondValidData.names[0], inputType.text, apiData.apiKey).then(placeDetailsResponse => {
                 expect(placeDetailsResponse.body.result).not.to.have.property('formatted_phone_number')
             })
         })
